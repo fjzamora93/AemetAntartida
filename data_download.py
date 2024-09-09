@@ -26,7 +26,7 @@ for i in range (2024, 2025):
 
         print(f"Descargando datos de {ini} a {fin}...")
         
-        estacion = 89064  # gabriel de castilla ///// 89064 # juan carlos I
+        estacion = 89070  # gabriel de castilla ///// 89064 # juan carlos I
         
         # URL de la solicitud inicial a la API
         url = f"https://opendata.aemet.es/opendata/api/antartida/datos/fechaini/{ini}T00%3A00%3A00UTC/fechafin/{fin}T00%3A00%3A00UTC/estacion/{estacion}"
