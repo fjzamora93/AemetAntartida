@@ -1,0 +1,3 @@
+Crear una función que separe los datos en periodos como mínimo de un año en caso de encontrar
+un periodo donde hay más de una semana sin datos, se debe separar en dos periodos diferentes.
+
