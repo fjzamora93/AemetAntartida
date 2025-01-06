@@ -11,3 +11,6 @@ data_jci/
 junk/
 data/
 resource/
+
+# Ignorar cualquier archivo o directorio dentro de un directorio llamado /data
+/data/*
