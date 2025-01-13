@@ -17,6 +17,7 @@ def acum_prec(df: pd.DataFrame, acumulation: int = 6) -> pd.DataFrame:
     df.set_index('date', inplace=True)
     df_resampled = df.resample(f'{acumulation}H').sum(min_count=1)
     df_resampled.reset_index(inplace=True)
+    df_resampled = df_resampled[['date', 'prec']]
     return df_resampled
 
 
@@ -30,3 +31,13 @@ def hours_sequential(df, frequency='H'):
     count_sequentials = len(df_merged) - len(df)
     print(f"Se han creado {count_sequentials} filas nuevas para completar la secuencia.")
     return df_merged
+
+
+def reduce_frequency(df: pd.DataFrame, frequency: int=3):
+    print('Reduciendo frecuencia')
+    df['date'] = pd.to_datetime(df['date'])
+    df.drop_duplicates('date', inplace=True)
+
+    df = df[df['date'].dt.hour % int(frequency) == 0]
+    
+    return df
