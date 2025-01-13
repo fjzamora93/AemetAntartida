@@ -12,6 +12,6 @@ junk/
 data/
 resource/
 env/
-
+venv/
 # Ignorar cualquier archivo o directorio dentro de un directorio llamado /data
 /data/*
